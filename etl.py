@@ -20,7 +20,7 @@ def main():
     config.read('dwh.cfg')
 
     cluster_config = config['CLUSTER']
-    conn = psycopg2.connect(f"host={cluster_config.get('DB_HOST')} \
+    conn = psycopg2.connect(f"host={cluster_config.get('HOST')} \
      dbname={cluster_config.get('DB_NAME')} \
      user={cluster_config.get('DB_USER')} \
      password={cluster_config.get('DB_PASSWORD')} \
