@@ -50,6 +50,13 @@ Python 3.7 or later.  Python 3.8.6 was used in development.
 
 ## Run it!
 
+Ensure you have a `dwh.cfg` file available.  The `dwh.cfg.template` can be used as a source.
+
+If you need to create infrastructure it is reproducible using `python initialise_infrastructure.py`.  When done,
+running `python teardown_infrastructure.py` will unwind all changes except for the ingress rule.
+
+Perform the ETL with:
+
 `python create_tables.py && python etl.py`
 
 ## Data Quality - Verify uniqueness
